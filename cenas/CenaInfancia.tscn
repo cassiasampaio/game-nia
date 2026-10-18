@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://dwmeqmv1ou3ua"]
+
+[ext_resource type="Script" uid="uid://cl1aa3325nx1a" path="res://scripts/CenaInfancia.cs" id="1_2euas"]
+[ext_resource type="Texture2D" uid="uid://dinxa4rwh1ssu" path="res://assets/imagens/clasroom A1.png" id="1_4ne3n"]
+[ext_resource type="PackedScene" uid="uid://b14ccb2pqlsu6" path="res://cenas/PersonagemTeste2.tscn" id="3_24lj1"]
+[ext_resource type="PackedScene" uid="uid://cbcx4qadv12py" path="res://cenas/DialogoUI.tscn" id="3_p3s0n"]
+
+[node name="CenaInfancia" type="Node2D" unique_id=268677513]
+script = ExtResource("1_2euas")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1162087563]
+layer = -1
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer" unique_id=1603589293]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_4ne3n")
+expand_mode = 1
+
+[node name="CanvasLayer2" type="CanvasLayer" parent="." unique_id=1792949375]
+
+[node name="DialogoUI" parent="CanvasLayer2" unique_id=875140248 instance=ExtResource("3_p3s0n")]
+
+[node name="PersonagemTeste2" parent="CanvasLayer2" unique_id=1238874637 instance=ExtResource("3_24lj1")]
+z_index = 3
+position = Vector2(633, 289)
+scale = Vector2(0.7, 0.7)
