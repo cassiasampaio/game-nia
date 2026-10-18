@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cvo7qdvmihj6h"
-path="res://.godot/imported/fundo_dizer-nao.png-1c53f98d9dc01cee9e3ca7aa52b8e61e.ctex"
+uid="uid://b7ujgwk60s5oa"
+path="res://.godot/imported/balao-principal_base.png-0e89da91b61450dcc1d3f86de7fac924.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/imagens/fundo_dizer-nao.png"
-dest_files=["res://.godot/imported/fundo_dizer-nao.png-1c53f98d9dc01cee9e3ca7aa52b8e61e.ctex"]
+source_file="res://assets/sprites/baloes/balao-principal_base.png"
+dest_files=["res://.godot/imported/balao-principal_base.png-0e89da91b61450dcc1d3f86de7fac924.ctex"]
 
 [params]
 

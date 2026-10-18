@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dydh0th8rajaj"
-path="res://.godot/imported/fundo_dizer-sim.png-469cf5cca54a31c937b65b572973fafe.ctex"
+uid="uid://dcevrkalccapu"
+path="res://.godot/imported/Nia criança Feliz.png-8eda4f738b3786aa6d84c01ca8c470a6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/imagens/fundo_dizer-sim.png"
-dest_files=["res://.godot/imported/fundo_dizer-sim.png-469cf5cca54a31c937b65b572973fafe.ctex"]
+source_file="res://assets/sprites/nia/Nia criança Feliz.png"
+dest_files=["res://.godot/imported/Nia criança Feliz.png-8eda4f738b3786aa6d84c01ca8c470a6.ctex"]
 
 [params]
 

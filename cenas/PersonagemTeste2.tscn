@@ -1,8 +1,9 @@
 [gd_scene format=3 uid="uid://b14ccb2pqlsu6"]
 
-[ext_resource type="Texture2D" uid="uid://s784fibv0lq5" path="res://assets/sprites/personagemTeste2/frame_0.png" id="1_ye0qs"]
+[ext_resource type="Texture2D" uid="uid://d1xkusyxk18xb" path="res://assets/sprites/nia/Nia criança.png" id="1_ye0qs"]
 
-[node name="PersonagemTeste2" type="Node2D" unique_id=1238874637]
+[node name="PersonagemNia" type="Node2D" unique_id=1238874637]
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1037191695]
+scale = Vector2(0.8, 0.8)
 texture = ExtResource("1_ye0qs")

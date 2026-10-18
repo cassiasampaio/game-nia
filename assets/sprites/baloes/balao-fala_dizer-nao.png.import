@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://s784fibv0lq5"
-path="res://.godot/imported/frame_0.png-66c99cecbd691760877bb49c88b7457c.ctex"
+uid="uid://dcxcmmjygdjw3"
+path="res://.godot/imported/balao-fala_dizer-nao.png-35482c093515cc83e7591462e1db250e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/personagemTeste2/frame_0.png"
-dest_files=["res://.godot/imported/frame_0.png-66c99cecbd691760877bb49c88b7457c.ctex"]
+source_file="res://assets/sprites/baloes/balao-fala_dizer-nao.png"
+dest_files=["res://.godot/imported/balao-fala_dizer-nao.png-35482c093515cc83e7591462e1db250e.ctex"]
 
 [params]
 

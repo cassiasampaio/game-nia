@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dk8agk07iyc3q"
-path="res://.godot/imported/idle.png-1800f7c06d5908763d656a0f3f46e8e3.ctex"
+uid="uid://c8hxvfs5tunxa"
+path="res://.godot/imported/balao-principal.png-158ed0953001242b4d9e35061903a98b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/idle.png"
-dest_files=["res://.godot/imported/idle.png-1800f7c06d5908763d656a0f3f46e8e3.ctex"]
+source_file="res://assets/sprites/baloes/balao-principal.png"
+dest_files=["res://.godot/imported/balao-principal.png-158ed0953001242b4d9e35061903a98b.ctex"]
 
 [params]
 

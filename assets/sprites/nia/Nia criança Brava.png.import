@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dinxa4rwh1ssu"
-path="res://.godot/imported/clasroom A1.png-da9ee3fb01179aa9690cbf6814fc6ca7.ctex"
+uid="uid://cx2bg3wpdmsnh"
+path="res://.godot/imported/Nia criança Brava.png-187e0e9da1d99f4e68df639af4f91852.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/imagens/clasroom A1.png"
-dest_files=["res://.godot/imported/clasroom A1.png-da9ee3fb01179aa9690cbf6814fc6ca7.ctex"]
+source_file="res://assets/sprites/nia/Nia criança Brava.png"
+dest_files=["res://.godot/imported/Nia criança Brava.png-187e0e9da1d99f4e68df639af4f91852.ctex"]
 
 [params]
 
