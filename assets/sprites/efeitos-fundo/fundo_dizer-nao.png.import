@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://s784fibv0lq5"
-path="res://.godot/imported/frame_0.png-66c99cecbd691760877bb49c88b7457c.ctex"
+uid="uid://cvo7qdvmihj6h"
+path="res://.godot/imported/fundo_dizer-nao.png-69d1bf609cbcd93389a17c57775b03f1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/personagemTeste2/frame_0.png"
-dest_files=["res://.godot/imported/frame_0.png-66c99cecbd691760877bb49c88b7457c.ctex"]
+source_file="res://assets/sprites/efeitos-fundo/fundo_dizer-nao.png"
+dest_files=["res://.godot/imported/fundo_dizer-nao.png-69d1bf609cbcd93389a17c57775b03f1.ctex"]
 
 [params]
 

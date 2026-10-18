@@ -1,5 +1,11 @@
 [gd_scene format=3 uid="uid://cbcx4qadv12py"]
 
+[ext_resource type="Texture2D" uid="uid://b7ujgwk60s5oa" path="res://assets/sprites/baloes/balao-principal_base.png" id="1_idj3q"]
+[ext_resource type="Texture2D" uid="uid://c2lg2i07mcp02" path="res://assets/sprites/baloes/balao-principal_nome.png" id="2_hmkir"]
+[ext_resource type="Texture2D" uid="uid://dcxcmmjygdjw3" path="res://assets/sprites/baloes/balao-fala_dizer-nao.png" id="3_48ffi"]
+[ext_resource type="Texture2D" uid="uid://cuocnswd848l5" path="res://assets/sprites/baloes/balao-fala_dizer-sim.png" id="4_sewav"]
+[ext_resource type="Texture2D" uid="uid://bpvlrc5avcmva" path="res://assets/sprites/baloes/balao-pensamento.png" id="5_jt4g3"]
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3f3hh"]
 
 [sub_resource type="Theme" id="Theme_wolft"]
@@ -20,6 +26,9 @@ corner_radius_bottom_left = 20
 [sub_resource type="Theme" id="Theme_3f3hh"]
 PanelContainer/styles/panel = SubResource("StyleBoxFlat_lpbjp")
 
+[sub_resource type="Theme" id="Theme_hmkir"]
+RichTextLabel/colors/default_color = Color(0, 0, 0, 1)
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wolft"]
 bg_color = Color(0.7750634, 0.7750634, 0.7750633, 1)
 corner_radius_top_left = 20
@@ -31,7 +40,27 @@ corner_radius_bottom_left = 20
 PanelContainer/styles/panel = SubResource("StyleBoxFlat_wolft")
 
 [sub_resource type="LabelSettings" id="LabelSettings_wolft"]
+font_size = 20
 font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_sewav"]
+
+[sub_resource type="Theme" id="Theme_jt4g3"]
+Button/styles/disabled = SubResource("StyleBoxEmpty_sewav")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_lvecb"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_48ffi"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_jt4g3"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_htog7"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_u8ksu"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_idv76"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_1oxhq"]
 
 [node name="DialogoUI" type="Control" unique_id=875140248]
 layout_mode = 3
@@ -40,9 +69,11 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 theme = SubResource("Theme_wolft")
 
-[node name="CaixaDialogo" type="PanelContainer" parent="." unique_id=1712617321]
+[node name="CaixaDialogoOBS" type="PanelContainer" parent="." unique_id=1712617321]
+visible = false
 custom_minimum_size = Vector2(0, 150)
 layout_mode = 1
 anchors_preset = 12
@@ -55,17 +86,63 @@ offset_right = -46.0
 offset_bottom = -21.0
 grow_horizontal = 2
 grow_vertical = 0
+mouse_filter = 2
 theme = SubResource("Theme_3f3hh")
 
-[node name="TextoDialogo" type="RichTextLabel" parent="CaixaDialogo" unique_id=193248318]
+[node name="TextoDialogoOBS" type="RichTextLabel" parent="CaixaDialogoOBS" unique_id=193248318]
 layout_mode = 2
-text = "\"Ô minha filha, você tem que pentear esse cabelo! Uma menina tão bonita com o cabelo espantado assim...\""
+mouse_filter = 2
+text = "texto de teste"
 horizontal_alignment = 1
 vertical_alignment = 1
-visible_characters = 1000
-visible_ratio = 9.615385
 
-[node name="CaixaLocutor" type="PanelContainer" parent="." unique_id=934464185]
+[node name="CaixaDialogo" type="Control" parent="." unique_id=42608257]
+custom_minimum_size = Vector2(0, 263)
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -150.0
+grow_horizontal = 2
+grow_vertical = 0
+mouse_filter = 2
+theme = SubResource("Theme_3f3hh")
+
+[node name="ImagemBalaoDialogo" type="TextureRect" parent="CaixaDialogo" unique_id=1474382432]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 65.0
+offset_top = -35.5
+offset_right = 321.0
+offset_bottom = 107.5
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("1_idj3q")
+
+[node name="TextoDialogo" type="RichTextLabel" parent="CaixaDialogo" unique_id=1596785716]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 295.0
+offset_top = 43.0
+offset_right = -199.0
+offset_bottom = -79.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme = SubResource("Theme_hmkir")
+text = "texto de teste"
+autowrap_trim_flags = 0
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CaixaLocutorOBS" type="PanelContainer" parent="." unique_id=934464185]
+visible = false
 custom_minimum_size = Vector2(200, 50)
 layout_mode = 1
 anchors_preset = 2
@@ -76,54 +153,293 @@ offset_top = -205.0
 offset_right = 293.0
 offset_bottom = -155.0
 grow_vertical = 0
+mouse_filter = 2
 theme = SubResource("Theme_lpbjp")
 
-[node name="NomeLocutor" type="Label" parent="CaixaLocutor" unique_id=187793480]
+[node name="NomeLocutorOBS" type="Label" parent="CaixaLocutorOBS" unique_id=187793480]
 layout_mode = 2
-text = "VOVÓ RAIMUNDA"
+text = "NOME TESTE"
 label_settings = SubResource("LabelSettings_wolft")
 horizontal_alignment = 1
 
-[node name="Opcoes" type="VBoxContainer" parent="." unique_id=794020008]
-custom_minimum_size = Vector2(50, 50)
+[node name="CaixaLocutor" type="Control" parent="." unique_id=609710322]
+custom_minimum_size = Vector2(200, 50)
 layout_mode = 1
-anchors_preset = 6
+anchors_preset = 3
 anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -416.0
+offset_top = -278.0
+offset_right = -216.0
+offset_bottom = -225.0
+grow_horizontal = 0
+grow_vertical = 0
+mouse_filter = 2
+theme = SubResource("Theme_lpbjp")
+
+[node name="TextureRect" type="TextureRect" parent="CaixaLocutor" unique_id=1974433366]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.9, 0.9)
+texture = ExtResource("2_hmkir")
+
+[node name="NomeLocutor" type="Label" parent="CaixaLocutor" unique_id=284863844]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -16.0
+offset_top = 2.0
+offset_right = -16.0
+offset_bottom = -19.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "NOME TESTE"
+label_settings = SubResource("LabelSettings_wolft")
+horizontal_alignment = 1
+
+[node name="Opcoes" type="Control" parent="." unique_id=1584532192]
+custom_minimum_size = Vector2(867, 260)
+layout_mode = 1
+anchors_preset = 14
 anchor_top = 0.5
 anchor_right = 1.0
 anchor_bottom = 0.5
-offset_left = -431.0
-offset_top = -167.0
-offset_right = -117.0
-offset_bottom = -23.0
-grow_horizontal = 0
+offset_top = -130.0
+offset_bottom = 130.0
+grow_horizontal = 2
 grow_vertical = 2
-scale = Vector2(1.2, 1.2)
+mouse_filter = 2
 
-[node name="BotaoSim" type="Button" parent="Opcoes" unique_id=659506181]
-custom_minimum_size = Vector2(0, 70)
-layout_mode = 2
-text = "\"Vovó, eu não gosto quando a senhora fala assim do meu cabelo.\""
+[node name="BotaoNao" type="Button" parent="Opcoes" unique_id=659506181]
+custom_minimum_size = Vector2(468, 142)
+layout_mode = 0
+offset_left = 46.0
+offset_top = 37.0
+offset_right = 514.0
+offset_bottom = 179.0
+size_flags_horizontal = 0
+size_flags_vertical = 0
+size_flags_stretch_ratio = 1.63
+theme = SubResource("Theme_jt4g3")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_lvecb")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_48ffi")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_jt4g3")
+text = "BOTAO NAO"
+autowrap_mode = 2
+icon_alignment = 1
+
+[node name="ImagemBalaoNao" type="TextureRect" parent="Opcoes/BotaoNao" unique_id=185995551]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 11.5
+offset_top = -2.5
+offset_right = 109.5
+offset_bottom = 39.5
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("3_48ffi")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="TextoBalaoNao" type="Label" parent="Opcoes/BotaoNao" unique_id=1082027147]
+layout_mode = 1
+offset_left = 61.0
+offset_top = 37.0
+offset_right = 435.0
+offset_bottom = 120.0
+scale = Vector2(0.8, 0.8)
+theme_override_font_sizes/font_size = 23
+text = "BOTAO NAO NOVO"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="BotaoSim" type="Button" parent="Opcoes" unique_id=1606307199]
+custom_minimum_size = Vector2(270, 80)
+layout_mode = 0
+offset_left = 816.0
+offset_top = -95.0
+offset_right = 1086.0
+offset_bottom = -15.0
+scale = Vector2(1.6, 1.6)
+size_flags_vertical = 4
+theme_override_styles/normal = SubResource("StyleBoxEmpty_htog7")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_u8ksu")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_idv76")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_1oxhq")
+text = "BOTAO SIM"
 autowrap_mode = 2
 
-[node name="BotaoNao" type="Button" parent="Opcoes" unique_id=1606307199]
-custom_minimum_size = Vector2(0, 70)
+[node name="ImagemBalaoSim" type="TextureRect" parent="Opcoes/BotaoSim" unique_id=2100665152]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_sewav")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="TextoBalaoSim" type="Label" parent="Opcoes/BotaoSim" unique_id=517147064]
+layout_mode = 1
+offset_left = 80.0
+offset_top = 16.0
+offset_right = 276.0
+offset_bottom = 65.0
+scale = Vector2(0.8, 0.8)
+text = "BOTAO SIM NOVO"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="OpcoesOBS" type="HBoxContainer" parent="." unique_id=1709877238]
+visible = false
+custom_minimum_size = Vector2(867, 260)
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = -130.0
+offset_bottom = 130.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_constants/separation = 450
+alignment = 1
+
+[node name="BotaoNaoOBS" type="Button" parent="OpcoesOBS" unique_id=2047419747]
+custom_minimum_size = Vector2(468, 142)
 layout_mode = 2
-text = "\"Arruma pra mim, vovó! Eu não quero ficar feia\""
+size_flags_horizontal = 0
+size_flags_vertical = 0
+size_flags_stretch_ratio = 1.63
+theme = SubResource("Theme_jt4g3")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_lvecb")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_48ffi")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_jt4g3")
+text = "BOTAO NAO"
+autowrap_mode = 2
+icon_alignment = 1
+
+[node name="ImagemBalaoNaoOBS" type="TextureRect" parent="OpcoesOBS/BotaoNaoOBS" unique_id=6062726]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 11.5
+offset_top = -2.5
+offset_right = 109.5
+offset_bottom = 39.5
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("3_48ffi")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="TextoBalaoNaoOBS" type="Label" parent="OpcoesOBS/BotaoNaoOBS" unique_id=248813031]
+layout_mode = 1
+offset_left = 48.0
+offset_top = 27.0
+offset_right = 433.0
+offset_bottom = 140.0
+scale = Vector2(0.8, 0.8)
+text = "BOTAO NAO NOVO"
+horizontal_alignment = 1
+vertical_alignment = 1
 autowrap_mode = 2
 
-[node name="BalaoPensamento" type="PanelContainer" parent="." unique_id=1472251279]
+[node name="BotaoSimOBS" type="Button" parent="OpcoesOBS" unique_id=452190089]
+custom_minimum_size = Vector2(270, 80)
+layout_mode = 2
+size_flags_vertical = 4
+text = "BOTAO SIM"
+autowrap_mode = 2
+
+[node name="BalaoPensamentoNao" type="Control" parent="." unique_id=1715942641]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 36.0
+offset_top = -327.0
+offset_right = 449.0
+offset_bottom = -126.0
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="ImagemBalaoPensamentoNao" type="TextureRect" parent="BalaoPensamentoNao" unique_id=1378962684]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("5_jt4g3")
+expand_mode = 1
+stretch_mode = 5
+flip_h = true
+
+[node name="TextoPensamentoNao" type="RichTextLabel" parent="BalaoPensamentoNao" unique_id=966145272]
+layout_mode = 0
+offset_left = 58.0
+offset_top = 57.0
+offset_right = 253.0
+offset_bottom = 148.0
+mouse_filter = 2
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+text = "PENSAMENTO NAO"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="BalaoPensamentoNaoOBS" type="PanelContainer" parent="." unique_id=933403126]
 visible = false
 layout_mode = 1
 anchors_preset = 4
 anchor_top = 0.5
 anchor_bottom = 0.5
 offset_left = 49.0
-offset_top = -223.0
+offset_top = -285.0
 offset_right = 343.0
-offset_bottom = -141.0
+offset_bottom = -203.0
 grow_vertical = 2
+mouse_filter = 2
 
-[node name="TextoPensamento" type="RichTextLabel" parent="BalaoPensamento" unique_id=966145272]
+[node name="TextoPensamentoNaoOBS" type="RichTextLabel" parent="BalaoPensamentoNaoOBS" unique_id=1894182045]
 layout_mode = 2
-text = "Será que estou fazendo a escolha certa?"
+mouse_filter = 2
+text = "PENSAMENTO NAO"
+
+[node name="BalaoPensamentoSim" type="PanelContainer" parent="." unique_id=1090304661]
+visible = false
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -345.0
+offset_top = -223.0
+offset_right = -51.0
+offset_bottom = -141.0
+grow_horizontal = 0
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="TextoPensamentoSim" type="RichTextLabel" parent="BalaoPensamentoSim" unique_id=1768345447]
+visible = false
+layout_mode = 2
+mouse_filter = 2
+text = "PENSAMENTO NAO"

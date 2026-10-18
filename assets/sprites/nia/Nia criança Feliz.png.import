@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bd2d16w347tkj"
-path="res://.godot/imported/frame_2.png-3975fe4ca462270ffc0f0e6bbce37845.ctex"
+uid="uid://dcevrkalccapu"
+path="res://.godot/imported/Nia criança Feliz.png-8eda4f738b3786aa6d84c01ca8c470a6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/personagemTeste2/frame_2.png"
-dest_files=["res://.godot/imported/frame_2.png-3975fe4ca462270ffc0f0e6bbce37845.ctex"]
+source_file="res://assets/sprites/nia/Nia criança Feliz.png"
+dest_files=["res://.godot/imported/Nia criança Feliz.png-8eda4f738b3786aa6d84c01ca8c470a6.ctex"]
 
 [params]
 
