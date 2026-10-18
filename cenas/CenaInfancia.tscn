@@ -4,6 +4,8 @@
 [ext_resource type="Texture2D" uid="uid://dinxa4rwh1ssu" path="res://assets/imagens/clasroom A1.png" id="1_4ne3n"]
 [ext_resource type="PackedScene" uid="uid://b14ccb2pqlsu6" path="res://cenas/PersonagemTeste2.tscn" id="3_24lj1"]
 [ext_resource type="PackedScene" uid="uid://cbcx4qadv12py" path="res://cenas/DialogoUI.tscn" id="3_p3s0n"]
+[ext_resource type="Texture2D" uid="uid://cvo7qdvmihj6h" path="res://assets/imagens/fundo_dizer-nao.png" id="3_skjdp"]
+[ext_resource type="Texture2D" uid="uid://dydh0th8rajaj" path="res://assets/imagens/fundo_dizer-sim.png" id="4_suc8v"]
 
 [node name="CenaInfancia" type="Node2D" unique_id=268677513]
 script = ExtResource("1_2euas")
@@ -12,6 +14,7 @@ script = ExtResource("1_2euas")
 layer = -1
 
 [node name="TextureRect" type="TextureRect" parent="CanvasLayer" unique_id=1603589293]
+visible = false
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -19,6 +22,55 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("1_4ne3n")
 expand_mode = 1
+
+[node name="FundoEsquerdo" type="ColorRect" parent="CanvasLayer" unique_id=297608927]
+visible = false
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_right = 640.0
+grow_vertical = 2
+size_flags_vertical = 3
+color = Color(0.4509804, 1, 1, 0.20392157)
+
+[node name="FundoDireito" type="ColorRect" parent="CanvasLayer" unique_id=642589397]
+visible = false
+anchors_preset = 11
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -640.0
+grow_horizontal = 0
+grow_vertical = 2
+size_flags_vertical = 3
+color = Color(0.95470375, 0.8979419, 0.73898774, 0.20392157)
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer" unique_id=1469597127]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.9843137, 0.96862745, 0.96862745, 1)
+
+[node name="ImagemFundoNao" type="TextureRect" parent="CanvasLayer" unique_id=1834517020]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_skjdp")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="ImagemFundoSim" type="TextureRect" parent="CanvasLayer" unique_id=740333920]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_suc8v")
+expand_mode = 1
+stretch_mode = 5
 
 [node name="CanvasLayer2" type="CanvasLayer" parent="." unique_id=1792949375]
 

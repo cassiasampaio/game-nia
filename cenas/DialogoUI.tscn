@@ -40,6 +40,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 theme = SubResource("Theme_wolft")
 
 [node name="CaixaDialogo" type="PanelContainer" parent="." unique_id=1712617321]
@@ -55,11 +56,13 @@ offset_right = -46.0
 offset_bottom = -21.0
 grow_horizontal = 2
 grow_vertical = 0
+mouse_filter = 2
 theme = SubResource("Theme_3f3hh")
 
 [node name="TextoDialogo" type="RichTextLabel" parent="CaixaDialogo" unique_id=193248318]
 layout_mode = 2
-text = "\"Ô minha filha, você tem que pentear esse cabelo! Uma menina tão bonita com o cabelo espantado assim...\""
+mouse_filter = 2
+text = "texto de teste"
 horizontal_alignment = 1
 vertical_alignment = 1
 visible_characters = 1000
@@ -76,44 +79,42 @@ offset_top = -205.0
 offset_right = 293.0
 offset_bottom = -155.0
 grow_vertical = 0
+mouse_filter = 2
 theme = SubResource("Theme_lpbjp")
 
 [node name="NomeLocutor" type="Label" parent="CaixaLocutor" unique_id=187793480]
 layout_mode = 2
-text = "VOVÓ RAIMUNDA"
+text = "NOME TESTE"
 label_settings = SubResource("LabelSettings_wolft")
 horizontal_alignment = 1
 
-[node name="Opcoes" type="VBoxContainer" parent="." unique_id=794020008]
-custom_minimum_size = Vector2(50, 50)
+[node name="Opcoes" type="HBoxContainer" parent="." unique_id=1313339330]
+custom_minimum_size = Vector2(867, 260)
 layout_mode = 1
-anchors_preset = 6
-anchor_left = 1.0
-anchor_top = 0.5
+anchors_preset = 15
 anchor_right = 1.0
-anchor_bottom = 0.5
-offset_left = -431.0
-offset_top = -167.0
-offset_right = -117.0
-offset_bottom = -23.0
-grow_horizontal = 0
+anchor_bottom = 1.0
+grow_horizontal = 2
 grow_vertical = 2
-scale = Vector2(1.2, 1.2)
+mouse_filter = 2
+theme_override_constants/separation = 450
+alignment = 1
 
-[node name="BotaoSim" type="Button" parent="Opcoes" unique_id=659506181]
-custom_minimum_size = Vector2(0, 70)
+[node name="BotaoNao" type="Button" parent="Opcoes" unique_id=659506181]
+custom_minimum_size = Vector2(270, 80)
 layout_mode = 2
-text = "\"Vovó, eu não gosto quando a senhora fala assim do meu cabelo.\""
+size_flags_vertical = 4
+text = "BOTAO NAO"
 autowrap_mode = 2
 
-[node name="BotaoNao" type="Button" parent="Opcoes" unique_id=1606307199]
-custom_minimum_size = Vector2(0, 70)
+[node name="BotaoSim" type="Button" parent="Opcoes" unique_id=1606307199]
+custom_minimum_size = Vector2(270, 80)
 layout_mode = 2
-text = "\"Arruma pra mim, vovó! Eu não quero ficar feia\""
+size_flags_vertical = 4
+text = "BOTAO SIM"
 autowrap_mode = 2
 
-[node name="BalaoPensamento" type="PanelContainer" parent="." unique_id=1472251279]
-visible = false
+[node name="BalaoPensamentoNao" type="PanelContainer" parent="." unique_id=1472251279]
 layout_mode = 1
 anchors_preset = 4
 anchor_top = 0.5
@@ -123,7 +124,31 @@ offset_top = -223.0
 offset_right = 343.0
 offset_bottom = -141.0
 grow_vertical = 2
+mouse_filter = 2
 
-[node name="TextoPensamento" type="RichTextLabel" parent="BalaoPensamento" unique_id=966145272]
+[node name="TextoPensamentoNao" type="RichTextLabel" parent="BalaoPensamentoNao" unique_id=966145272]
 layout_mode = 2
-text = "Será que estou fazendo a escolha certa?"
+mouse_filter = 2
+text = "PENSAMENTO NAO"
+
+[node name="BalaoPensamentoSim" type="PanelContainer" parent="." unique_id=1090304661]
+visible = false
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -345.0
+offset_top = -223.0
+offset_right = -51.0
+offset_bottom = -141.0
+grow_horizontal = 0
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="TextoPensamentoSim" type="RichTextLabel" parent="BalaoPensamentoSim" unique_id=1768345447]
+visible = false
+layout_mode = 2
+mouse_filter = 2
+text = "PENSAMENTO NAO"
