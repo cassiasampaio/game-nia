@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://b7tubn2n8l5tc"]
+
+[ext_resource type="Texture2D" uid="uid://dcevrkalccapu" path="res://assets/sprites/nia/Nia criança Feliz.png" id="1_5j01n"]
+
+[node name="PersonagemNiaFeliz" type="Node2D" unique_id=1911752746]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=920890551]
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("1_5j01n")

@@ -1,0 +1,59 @@
+[gd_scene format=3 uid="uid://vi6mu5uocvnl"]
+
+[ext_resource type="Script" uid="uid://bbc2o2gtke770" path="res://cenas/TelaCreditos.cs" id="1_fo4mo"]
+[ext_resource type="Texture2D" uid="uid://ufkox5rhsidr" path="res://assets/sprites/plano-fundo/bg-title.png" id="1_yakeu"]
+[ext_resource type="Texture2D" uid="uid://c4rnqax4jt1ye" path="res://assets/sprites/creditos/creditos.png" id="2_csadk"]
+[ext_resource type="PackedScene" uid="uid://tmed5gtup8nb" path="res://cenas/PersonagemNiaCreditos.tscn" id="3_csadk"]
+[ext_resource type="Texture2D" uid="uid://2go0x4qf2lpn" path="res://assets/sprites/icones/refresh.png" id="5_txxgf"]
+
+[node name="TelaCreditos" type="Control" unique_id=304112753]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_fo4mo")
+
+[node name="PlanoFundo" type="TextureRect" parent="." unique_id=1005795169]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_yakeu")
+expand_mode = 1
+
+[node name="Creditos" type="TextureRect" parent="." unique_id=1199230644]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_right = 640.0
+grow_horizontal = 0
+grow_vertical = 2
+texture = ExtResource("2_csadk")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="PersonagemNiaCreditos" parent="." unique_id=1264422520 instance=ExtResource("3_csadk")]
+position = Vector2(394, 645)
+scale = Vector2(0.6, 0.6)
+
+[node name="BotaoReiniciar" type="TextureButton" parent="." unique_id=1619452021]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -77.0
+offset_top = -78.0
+offset_right = 8.0
+offset_bottom = 7.0
+grow_horizontal = 0
+grow_vertical = 0
+scale = Vector2(0.6, 0.6)
+texture_normal = ExtResource("5_txxgf")

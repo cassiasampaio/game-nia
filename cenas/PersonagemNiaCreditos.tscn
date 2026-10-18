@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://tmed5gtup8nb"]
+
+[ext_resource type="Texture2D" uid="uid://dpkfg08mg61s6" path="res://assets/sprites/creditos/Group.png" id="1_pgdyt"]
+[ext_resource type="Texture2D" uid="uid://boylgtq40rgtp" path="res://assets/sprites/creditos/Group-1.png" id="2_dx7mh"]
+[ext_resource type="Texture2D" uid="uid://bctdhau6s5q6n" path="res://assets/sprites/creditos/Group-2.png" id="3_tmf0t"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_kjwc8"]
+animations = [{
+"frames": [{
+"duration": 5.0,
+"texture": ExtResource("1_pgdyt")
+}, {
+"duration": 5.0,
+"texture": ExtResource("2_dx7mh")
+}, {
+"duration": 5.0,
+"texture": ExtResource("3_tmf0t")
+}],
+"loop": true,
+"name": &"default",
+"speed": 1.0
+}]
+
+[node name="PersonagemNiaCreditos" type="Node2D" unique_id=1264422520]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=40104878]
+sprite_frames = SubResource("SpriteFrames_kjwc8")
+autoplay = "default"
+frame_progress = 0.95378155

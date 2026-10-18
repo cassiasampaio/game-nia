@@ -1,0 +1,62 @@
+[gd_scene format=3 uid="uid://dgo6f8ofqa3c4"]
+
+[ext_resource type="Script" uid="uid://ditlyixynkhll" path="res://cenas/CenaEmConstrucao.cs" id="1_7joyb"]
+[ext_resource type="Texture2D" uid="uid://ufkox5rhsidr" path="res://assets/sprites/plano-fundo/bg-title.png" id="1_o5p0l"]
+[ext_resource type="FontFile" uid="uid://cwx53s7x4j1iq" path="res://assets/fonte/ShortStack-Regular.ttf" id="2_kmtjr"]
+[ext_resource type="Texture2D" uid="uid://7qdnaj06fj1u" path="res://assets/sprites/icones/arrow-right.svg" id="3_kmtjr"]
+
+[sub_resource type="Theme" id="Theme_7joyb"]
+default_font = ExtResource("2_kmtjr")
+default_font_size = 45
+
+[node name="CenaEmConstrucao" type="Control" unique_id=102527836]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_7joyb")
+
+[node name="Fundo" type="TextureRect" parent="." unique_id=291675564]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_o5p0l")
+expand_mode = 1
+
+[node name="TextoPrincipal" type="Label" parent="." unique_id=1744287625]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_7joyb")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Em construção..."
+
+[node name="BotaoCreditos" type="TextureButton" parent="." unique_id=559587238]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -66.0
+offset_top = -66.0
+offset_right = -36.0
+offset_bottom = -36.0
+grow_horizontal = 0
+grow_vertical = 0
+scale = Vector2(1.8, 1.8)
+texture_normal = ExtResource("3_kmtjr")

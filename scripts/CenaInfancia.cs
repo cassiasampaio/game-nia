@@ -14,7 +14,8 @@ public partial class CenaInfancia : Node2D
 	
 	private TextureRect imagemFundoNao;
 	private TextureRect imagemFundoSim;
-	
+
+	private const string CaminhoCenaEmConstrucao = "res://cenas/CenaEmConstrucao.tscn";
 	
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
@@ -30,12 +31,12 @@ public partial class CenaInfancia : Node2D
 		textoBalaoNao = GetNode<Label>("CanvasLayer2/DialogoUI/Opcoes/BotaoNao/TextoBalaoNao");
 		textoBalaoSim = GetNode<Label>("CanvasLayer2/DialogoUI/Opcoes/BotaoSim/TextoBalaoSim");
 		
-		textoDialogo.Text = "Ô Nia, vem cá! Teu cabelo é tão fofinho... só deixa a tia arrumar aqui que tá todo armado e feio, parece até que você tomou um susto.";
+		textoDialogo.Text = "Ô Nia, vem cá! Teu cabelo é tão fofinho... só deixa a tia  arrumar aqui que tá todo armado e feio, parece até que você tomou um susto.";
 		nomeLocutor.Text = "Tia Júlia";
 		
 		textoPensamentoNao.Text = "Mas e se a titia  Júlia ficar triste?"; 
 		
-		textoBalaoNao.Text = "Tia Júlia, eu não gosto que fale assim do meu cabelo.";
+		textoBalaoNao.Text = "Tia Júlia, eu não gosto  que fale assim do meu cabelo.";
 		textoBalaoSim.Text = "Arruma, Tia Júlia! Eu não quero ficar feia.";
 
 		
@@ -53,7 +54,8 @@ public partial class CenaInfancia : Node2D
 		imagemFundoNao.MouseFilter = Control.MouseFilterEnum.Ignore;
 		imagemFundoSim.MouseFilter = Control.MouseFilterEnum.Ignore;
 
-
+		botaoNao.Pressed += MudarCenaEmConstrucao;
+		botaoSim.Pressed += MudarCenaEmConstrucao;
 	}
 	
 	private void MostrarPensamentoNao() 
@@ -81,6 +83,10 @@ public partial class CenaInfancia : Node2D
 		imagemFundoSim.Hide();
 	}
 
+	private void MudarCenaEmConstrucao()
+	{
+		GetTree().ChangeSceneToFile(CaminhoCenaEmConstrucao);
+	}
 
 	// Called every frame. 'delta' is the elapsed time since the previous frame.
 	public override void _Process(double delta)

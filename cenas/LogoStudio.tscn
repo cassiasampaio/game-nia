@@ -1,0 +1,57 @@
+[gd_scene format=3 uid="uid://c0rl0u7xoney7"]
+
+[ext_resource type="Texture2D" uid="uid://dsb6xprttorab" path="res://assets/sprites/logo-studio/frame_01.png" id="1_oo5ur"]
+[ext_resource type="Texture2D" uid="uid://dtocf4ewv5tbm" path="res://assets/sprites/logo-studio/frame_02.png" id="2_pqf2q"]
+[ext_resource type="Texture2D" uid="uid://cbmwarbwdhkme" path="res://assets/sprites/logo-studio/frame_03.png" id="3_1qroq"]
+[ext_resource type="Texture2D" uid="uid://c6lx4u0ar8fld" path="res://assets/sprites/logo-studio/frame_04.png" id="4_qvjhh"]
+[ext_resource type="Texture2D" uid="uid://bhwoahkqenqkx" path="res://assets/sprites/logo-studio/frame_05.png" id="5_8td52"]
+[ext_resource type="Texture2D" uid="uid://btxl485c6ec6i" path="res://assets/sprites/logo-studio/frame_06.png" id="6_s07u0"]
+[ext_resource type="Texture2D" uid="uid://c32ppeweox4uj" path="res://assets/sprites/logo-studio/frame_07.png" id="7_v2hne"]
+[ext_resource type="Texture2D" uid="uid://t6ryvlecfyds" path="res://assets/sprites/logo-studio/frame_08.png" id="8_3hye7"]
+[ext_resource type="Texture2D" uid="uid://ca84qhr7hj6e3" path="res://assets/sprites/logo-studio/frame_09.png" id="9_fschp"]
+[ext_resource type="Texture2D" uid="uid://k0jvgiidydv0" path="res://assets/sprites/logo-studio/frame_10.png" id="10_p2p8c"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_4dg4v"]
+animations = [{
+"frames": [{
+"duration": 0.5,
+"texture": ExtResource("1_oo5ur")
+}, {
+"duration": 0.5,
+"texture": ExtResource("2_pqf2q")
+}, {
+"duration": 0.5,
+"texture": ExtResource("3_1qroq")
+}, {
+"duration": 0.5,
+"texture": ExtResource("4_qvjhh")
+}, {
+"duration": 0.5,
+"texture": ExtResource("5_8td52")
+}, {
+"duration": 0.5,
+"texture": ExtResource("6_s07u0")
+}, {
+"duration": 0.5,
+"texture": ExtResource("7_v2hne")
+}, {
+"duration": 0.5,
+"texture": ExtResource("8_3hye7")
+}, {
+"duration": 0.5,
+"texture": ExtResource("9_fschp")
+}, {
+"duration": 0.5,
+"texture": ExtResource("10_p2p8c")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="LogoStudio" type="Node2D" unique_id=1494051977]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1316565531]
+sprite_frames = SubResource("SpriteFrames_4dg4v")
+autoplay = "default"
+frame_progress = 0.9715096
