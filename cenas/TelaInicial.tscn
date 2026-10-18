@@ -1,0 +1,86 @@
+[gd_scene format=3 uid="uid://diw2plyq5upmb"]
+
+[ext_resource type="PackedScene" uid="uid://b7tubn2n8l5tc" path="res://cenas/PersonagemNiaFeliz.tscn" id="1_4u2yi"]
+[ext_resource type="Script" uid="uid://c8fo3305x5taj" path="res://cenas/TelaInicial.cs" id="1_o6nwc"]
+[ext_resource type="Texture2D" uid="uid://ufkox5rhsidr" path="res://assets/sprites/plano-fundo/bg-title.png" id="2_klm7m"]
+[ext_resource type="FontFile" uid="uid://gkhwuuo15n8w" path="res://assets/fonte/LuckiestGuy-Regular.ttf" id="2_ofmwq"]
+[ext_resource type="PackedScene" uid="uid://c0rl0u7xoney7" path="res://cenas/LogoStudio.tscn" id="3_ckbqy"]
+[ext_resource type="FontFile" uid="uid://cwx53s7x4j1iq" path="res://assets/fonte/ShortStack-Regular.ttf" id="3_povrp"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_w42et"]
+font = ExtResource("2_ofmwq")
+font_size = 106
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4u2yi"]
+bg_color = Color(0.91764706, 0.4509804, 0.09019608, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_o6nwc"]
+bg_color = Color(0, 0, 0, 1)
+
+[sub_resource type="Theme" id="Theme_ckbqy"]
+default_font = ExtResource("3_povrp")
+default_font_size = 17
+Button/styles/disabled = null
+Button/styles/hover = SubResource("StyleBoxFlat_4u2yi")
+Button/styles/normal = SubResource("StyleBoxFlat_o6nwc")
+
+[node name="TelaInicial" type="Control" unique_id=1809714500]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_o6nwc")
+
+[node name="Fundo" type="TextureRect" parent="." unique_id=410784365]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_klm7m")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="TituloJogo" type="Label" parent="." unique_id=768989845]
+layout_mode = 0
+offset_left = 28.0
+offset_top = 32.0
+offset_right = 732.0
+offset_bottom = 293.0
+text = "A VIDA DE NIA"
+label_settings = SubResource("LabelSettings_w42et")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MenuBotoes" type="VBoxContainer" parent="." unique_id=1003460336]
+layout_mode = 0
+offset_left = 270.0
+offset_top = 301.0
+offset_right = 470.0
+offset_bottom = 501.0
+theme_override_constants/separation = 24
+
+[node name="BotaoIniciar" type="Button" parent="MenuBotoes" unique_id=1073560431]
+custom_minimum_size = Vector2(80, 50)
+layout_mode = 2
+theme = SubResource("Theme_ckbqy")
+text = "Iniciar Jogo"
+
+[node name="BotaoCreditos" type="Button" parent="MenuBotoes" unique_id=1330605800]
+custom_minimum_size = Vector2(80, 50)
+layout_mode = 2
+theme = SubResource("Theme_ckbqy")
+text = "Créditos
+"
+
+[node name="PersonagemNiaFeliz" parent="." unique_id=1911752746 instance=ExtResource("1_4u2yi")]
+position = Vector2(944, 356)
+scale = Vector2(0.4, 0.4)
+
+[node name="LogoStudio" parent="." unique_id=1494051977 instance=ExtResource("3_ckbqy")]
+position = Vector2(1183, 642)
+scale = Vector2(0.5, 0.5)

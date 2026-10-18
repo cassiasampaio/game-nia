@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://dwmeqmv1ou3ua"]
 
 [ext_resource type="Script" uid="uid://cl1aa3325nx1a" path="res://scripts/CenaInfancia.cs" id="1_2euas"]
-[ext_resource type="PackedScene" uid="uid://b14ccb2pqlsu6" path="res://cenas/PersonagemTeste2.tscn" id="3_24lj1"]
+[ext_resource type="PackedScene" uid="uid://b14ccb2pqlsu6" path="res://cenas/PersonagemNia.tscn" id="3_24lj1"]
 [ext_resource type="PackedScene" uid="uid://cbcx4qadv12py" path="res://cenas/DialogoUI.tscn" id="3_p3s0n"]
 [ext_resource type="Texture2D" uid="uid://cvo7qdvmihj6h" path="res://assets/sprites/efeitos-fundo/fundo_dizer-nao.png" id="3_skjdp"]
 [ext_resource type="Texture2D" uid="uid://dydh0th8rajaj" path="res://assets/sprites/efeitos-fundo/fundo_dizer-sim.png" id="4_suc8v"]
@@ -24,6 +24,7 @@ color = Color(0.9843137, 0.96862745, 0.96862745, 1)
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = -1.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("3_skjdp")
